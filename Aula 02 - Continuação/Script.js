@@ -100,3 +100,49 @@
 
 
 // Funções de JavaScript
+// function hello(){
+//     console.log("Hello")
+// }
+// hello()
+
+// function hello(nome){
+//     console.log('Hello '+nome)
+// }
+// hello('Pedro')
+
+// function soma(a,b){
+//     return a+b
+// }
+// console.log(soma(2,3))
+
+// const dobro = function (n){
+//     return n*2
+// }
+// const res = dobro(2)
+// console.log(res)
+// console.log(dobro(2))
+
+// Valor padrão 
+// const triplo = function (n = 5){
+//     return n*3
+// }
+// console.log(triplo())
+// console.log(triplo(8))
+
+//a => {console.log(a)}
+//(a,b) => console.log(a + b) syntax sugar
+//const test = (a ,b, c) => a * b * c
+//console.log(test(1,2,3));
+
+// const hello = () => console.log("Hello")
+// hello()
+// console.log(hello())
+
+// const dobro = valor => valor *2
+// console.log(dobro(80))
+
+const ehPar =  (n) => { 
+    return n % 2 === 0
+}
+
+console.log(ehPar(4));
