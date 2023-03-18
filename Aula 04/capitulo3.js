@@ -41,40 +41,37 @@
 //     }
 //     fs.readFile(nomeArquivo,exibirConteudo)
 // }
-// // abrirArquivo('arquivo.txt')
+// abrirArquivo('arquivo.txt')
 
-// function calculoDemorado(n){
-//     const p = new Promise(function(resolve,reject){
-//         let res = 0 
-//         for(let i = 1;i <= n; i++) res+=i
-//         resolve(res)
-//     })
-//     return p 
-// }
+function calculoDemorado(n){
+    const p = new Promise(function(resolve,reject){
+        let res = 0 
+        for(let i = 1;i <= n; i++) res+=i
+        resolve(res)
+    })
+    return p 
+}
 
-// const minhaPromisse = calculoDemorado(10) 
+const minhaPromisse = calculoDemorado(10) 
 
-// minhaPromisse.then((resultado)=>{console.log(resultado)})
+minhaPromisse.then((resultado)=>{console.log(resultado)})
 
-// function calculoRapidin(n){
-//     return Promise.resolve((n*(n+1))/2)
-// }
+function calculoRapidin(n){
+    return Promise.resolve((n*(n+1))/2)
+}
 
-// const pConcluido = calculoRapidin(10)
-// pConcluido.then((resul)=>{console.log(resul)})
+const pConcluido = calculoRapidin(10)
+pConcluido.then((resul)=>{console.log(resul)})
 
-// //reescrever a função calculoRapidinh sem usar o atalho promise.resolve 
+//reescrever a função calculoRapidinh sem usar o atalho promise.resolve 
 
-// function calculoRapidin2(n){
-//     const p2 = new Promise(function(resolve,reject){
-//         let res = 0
-//         for(let i = 1;i <= n; i++) res+=i
-//         resolve(res)
-//     })
-//     return p2 
-// }
-// const p2Promisse = calculoRapidin2(10) 
+function calculoRapidin2(n){
+    const p2 = new Promise(function(resolve,reject){
+        let res = ((n*(n+1))/2);
+        resolve(res)
+    })
+    return p2 
+}
+const p2Promisse = calculoRapidin2(10) 
 
-// p2Promisse.then((res)=>{console.log(res)})
-
-
+p2Promisse.then((res)=>{console.log(res)})
