@@ -18,6 +18,23 @@ const urlfinal = `${urlbase}?q=${q}&appid=${appid}&cnt=${cnt}&units=${units}&lan
 
 console.log(urlfinal);
 
-axios.get(urlfinal).then(response => {
-    console.log(response);   
+axios.get(urlfinal)
+.then(response => {
+    //console.log(response);  
+    return response.data 
+})
+.then(dados=>{
+    console.log(dados.cnt);
+    return dados
+})
+.then(dados =>{
+    return dados['list']
+})
+.then(dados =>{
+    for(let previsao of dados){
+        // console.log(previsao)
+        console.log("Temp_min: " + previsao.main.temp_min)
+        console.log("Temp_max: " + previsao.main.temp_max)
+        console.log("Descricao: " + previsao.weather[0].description)
+    }
 })
