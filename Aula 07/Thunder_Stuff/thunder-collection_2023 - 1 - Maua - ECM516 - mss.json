@@ -1,0 +1,83 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "2023 - 1 - Maua - ECM516 - mss",
+    "dateExported": "2023-04-29T12:30:27.413Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "9b2a56bf-c802-4867-9b29-53fe89477f9e",
+            "name": "Lembretes",
+            "containerId": "",
+            "created": "2023-04-29T12:28:13.290Z",
+            "sortNum": 10000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "49dbaab6-f277-49c9-8c78-17db292e181c",
+            "colId": "8faaaf65-5532-4cf9-8f6f-d0240ba6f1fd",
+            "containerId": "9b2a56bf-c802-4867-9b29-53fe89477f9e",
+            "name": "localhost:4000/lembretes",
+            "url": "localhost:4000/lembretes",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-04-29T12:26:44.487Z",
+            "modified": "2023-04-29T12:28:16.124Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d9122c61-b2d7-418a-bf9d-c2b263700950",
+            "colId": "8faaaf65-5532-4cf9-8f6f-d0240ba6f1fd",
+            "containerId": "9b2a56bf-c802-4867-9b29-53fe89477f9e",
+            "name": "localhost:4000/lembretes",
+            "url": "localhost:4000/lembretes",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-04-29T12:26:52.958Z",
+            "modified": "2023-04-29T12:28:18.859Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"texto\": \"{{#string}}\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f4928e4a-48bd-4078-b735-3968e9cc5e2c",
+            "colId": "8faaaf65-5532-4cf9-8f6f-d0240ba6f1fd",
+            "containerId": "9b2a56bf-c802-4867-9b29-53fe89477f9e",
+            "name": "Obter Lembretes",
+            "url": "localhost:4000/lembretes",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-04-29T12:27:30.134Z",
+            "modified": "2023-04-29T12:28:21.256Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3a3cf7bc-3224-45f7-8acd-51ba4decef7d",
+            "colId": "8faaaf65-5532-4cf9-8f6f-d0240ba6f1fd",
+            "containerId": "",
+            "name": "Post lembretes",
+            "url": "localhost:4000/lembretes",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-04-29T12:27:45.305Z",
+            "modified": "2023-04-29T12:27:45.305Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"texto\": \"{{#string}}\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
