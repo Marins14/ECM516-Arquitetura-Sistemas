@@ -11,3 +11,9 @@ npm i dotenv, é o cara que sabe puxar arquivos do .env
 instalar a extensão Thunder Client
 
 add a linha no package.json "start": "nodemon index.js"
+
+add a linha no package.json "start": "node index.js", "start:dev": "nodemon index.js" em ambiente produtivo 
+
+Não esquecer do arquivo .env com a port
+
+npm i uuid - gera id's evita fazer contador
