@@ -17,3 +17,16 @@ add a linha no package.json "start": "node index.js", "start:dev": "nodemon inde
 Não esquecer do arquivo .env com a port
 
 npm i uuid - gera id's evita fazer contador
+
+Barramento: 
+npm init -y 
+
+npm i express axios 
+
+npm i nodemon --save-dev
+
+
+## Entrega de realease 
+``` git tag 1.0.0 -a "Entrega dia 20.05 - este é um exemplo ```
+Não esquecer de fazer o push das tags 
+

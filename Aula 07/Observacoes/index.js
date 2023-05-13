@@ -5,6 +5,7 @@ const {v4: uuidv4} = require('uuid')
 const app = express()
 app.use(express.json())
 const observacoesPorLembreteID = {}
+const axios = require('axios')
 
 // :id significa que vai alterar a cada iteração 
 app.get('/lembretes/:id/observacoes', (req,res)=>{
