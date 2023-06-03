@@ -1,0 +1,56 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "ECM516",
+    "dateExported": "2023-06-03T12:25:44.921Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "6722adc8-fb88-4920-a99d-cac2ccf21531",
+            "colId": "a30ba058-2847-4cb1-a314-30f8a547ae15",
+            "containerId": "",
+            "name": "GET paciente",
+            "url": "localhost:4000/paciente",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-06-03T11:05:37.877Z",
+            "modified": "2023-06-03T11:18:22.837Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6860b0ef-5619-414b-8a64-d30880d048e4",
+            "colId": "a30ba058-2847-4cb1-a314-30f8a547ae15",
+            "containerId": "",
+            "name": "POST",
+            "url": "localhost:4000/adicionar-medico",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-06-03T11:08:01.527Z",
+            "modified": "2023-06-03T12:17:48.309Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"crm\":555478,\n  \"nome\": \"Carlos Macedo\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "0a46ad6a-c7e2-40e2-abb2-a4bb941b0aaa",
+            "colId": "a30ba058-2847-4cb1-a314-30f8a547ae15",
+            "containerId": "",
+            "name": "GET medico",
+            "url": "localhost:4000/medicos",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-06-03T11:32:26.900Z",
+            "modified": "2023-06-03T11:33:01.241Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
