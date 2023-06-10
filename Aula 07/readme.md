@@ -1,6 +1,6 @@
 Microserviços 
 
-npm init -y, para inicar o node 
+npm init -y, para iniciar o node 
 
 npm i express, instala o pacote json 
 

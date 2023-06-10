@@ -12,14 +12,24 @@ app.get('/lembretes/:id/observacoes', (req,res)=>{
     res.json(observacoesPorLembreteID[req.params.id] || [])
 })
 // observação : {texto: 'Whatever'}
-app.post('/lembretes/:id/observacoes', (req,res)=>{
+app.post('/lembretes/:id/observacoes',async (req,res)=>{
     const idObs = uuidv4()
     const {texto } = req.body
     const obsDoLembrete = observacoesPorLembreteID[req.params.id] || []
     obsDoLembrete.push({id: idObs, texto})
     observacoesPorLembreteID[req.params.id] = obsDoLembrete 
+    await axios.post('http://localhost:10000/eventos',{
+        tipo: 'ObservacaoCriada',
+        dados: {
+            id: idObs, texto, lembreteId: req.params.id
+        }
+    })
     // cod 201 significa que criou e esta ok 
     res.status(201).json(obsDoLembrete)
+})
+app.post('/eventos',function(req,res){
+    console.log(req.body)
+    res.status(200).send({msg: 'ok!'})
 })
 
 const PORT = process.env.PORT || 5000
