@@ -21,3 +21,17 @@ const funcoes = {
         baseConsulta[observacao.lembreteId]['observacoes'] = observacoes
     }
 }
+
+app.get('/lembretes',(req,res)=>{
+    res.status(200).send(baseConsulta)
+})
+
+app.post('/eventos',(req,res)=>{
+    const evento = req.body // {tipo:...., dados:....}
+    const funcao = funcoes[evento.tipo] 
+    funcao(evento.dados)
+})
+
+app.listen(process.env.PORT,()=>{
+    console.log(`Consulta. Porta ${process.env.PORT}`);
+})

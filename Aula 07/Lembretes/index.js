@@ -26,10 +26,12 @@ app.post('/lembretes', (req,res)=>{
 app.get('/lembretes',(req,res)=>{
     res.send(lembretes)
 })
-const PORT = process.eventNames.PORT || 4000
-app.listen(PORT, ()=> console.log(`Lembretes. Porta ${PORT}`))
 
 app.post('/eventos', (req,res)=>{
     console.log(req.body)
     res.end()
 })
+
+const PORT = process.env.PORT || 4000
+app.listen(PORT, ()=> console.log(`Lembretes. Porta ${PORT}`))
+
