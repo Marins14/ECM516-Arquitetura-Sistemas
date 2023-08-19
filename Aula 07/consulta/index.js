@@ -27,9 +27,13 @@ app.get('/lembretes',(req,res)=>{
 })
 
 app.post('/eventos',(req,res)=>{
-    const evento = req.body // {tipo:...., dados:....}
-    const funcao = funcoes[evento.tipo] 
-    funcao(evento.dados)
+    try{
+        const evento = req.body // {tipo:...., dados:....}
+        const funcao = funcoes[evento.tipo] 
+        funcao(evento.dados)
+    }
+    catch (e){}
+    res.status(200).json({msg:'ok'})
 })
 
 app.listen(process.env.PORT,()=>{

@@ -25,6 +25,7 @@ npm i express axios
 
 npm i nodemon --save-dev
 
+*em todas as pastas rodar os install* 
 
 ## Entrega de realease 
 ``` git tag 1.0.0 -a "Entrega dia 20.05 - este é um exemplo ```
