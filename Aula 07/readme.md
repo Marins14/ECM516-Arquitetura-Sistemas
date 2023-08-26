@@ -25,6 +25,9 @@ npm i express axios
 
 npm i nodemon --save-dev
 
+Para rodar: 
+npm i axios express nodemon uuid
+
 *em todas as pastas rodar os install* 
 
 ## Entrega de realease 

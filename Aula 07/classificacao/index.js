@@ -9,10 +9,12 @@ app.use(express.json())
 const palavraChave = 'importante'
 const funcoes = {
     ObservacaoCriada: (observacao)=>{
+        //console.log(observacao);
         observacao.status = observacao.texto.includes(palavraChave) ? 
         'importante': 
         'comum'
-    app.post('http://localhost:10000/eventos',{
+        //console.log(observacao);
+    axios.post('http://localhost:10000/eventos',{
         tipo: 'ObservacaoClassificada',
         dados: observacao
     })
