@@ -34,3 +34,16 @@ npm i axios express nodemon uuid
 ``` git tag 1.0.0 -a "Entrega dia 20.05 - este é um exemplo ```
 Não esquecer de fazer o push das tags 
 
+
+## Docker
+- para rodar o docker: 
+```
+docker build -t nomeDockerHub/tag`
+
+kubectl apply -f lembretes.yaml
+
+#Pode deletar tbm com o proprio yaml -> kubectl delete -f lembretes.yaml
+```
+
+### Validar código yaml
+https://www.yamllint.com/

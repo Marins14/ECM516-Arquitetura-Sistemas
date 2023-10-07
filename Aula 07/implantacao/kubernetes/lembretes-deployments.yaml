@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lembretes-deployment
+spec:
+  # Qtas replicas 
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lembretes
+  template:
+    metadata:
+      labels:
+        app: lembretes
+    spec:
+      containers:
+        - name: lembretes # '-' é uma coleção
+          image: mmarins14/ecm516-lembretes:0.0.1
+          # resources:
+          #   limits:
+          #     memory: 256Mi # 256 MB i -> binario
+          #     cpu: 1
