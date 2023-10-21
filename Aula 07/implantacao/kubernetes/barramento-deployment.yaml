@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: lembretes-deployment
+  name: barramento-de-eventos-deployment
 spec:
   # Qtas replicas 
   replicas: 1
   selector:
     matchLabels:
-      app: lembretes
+      app: barramento-de-eventos
   template:
     metadata:
       labels:
-        app: lembretes
+        app: barramento-de-eventos
     spec:
       containers:
-        - name: lembretes # '-' é uma coleção
-          image: mmarins14/ecm516-lembretes # nada ou latest significa que vou pegar a ultima versao
+        - name: barramento-de-eventos # '-' é uma coleção
+          image: mmarins14/ecm516-barramento-de-eventos # nada ou latest significa que vou pegar a ultima versao
           # resources:
           #   limits:
           #     memory: 256Mi # 256 MB i -> binario
