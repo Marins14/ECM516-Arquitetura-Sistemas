@@ -32,8 +32,8 @@ spec:
   ports:
     - name: classificacao
       protocol: TCP 
-      port: 6000
-      targetPort: 6000 # porta que o container esta escutando
+      port: 7000
+      targetPort: 7000 # porta que o container esta escutando
 --- 
 apiVersion: v1
 kind: Service
@@ -48,5 +48,5 @@ spec:
   ports: 
     - name: classificacao
       protocol: TCP
-      port: 6000
-      targetPort: 6000 #porta do microservico
+      port: 7000
+      targetPort: 7000 #porta do microservico
