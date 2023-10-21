@@ -13,21 +13,23 @@ app.post('/eventos', async(req,res)=>{
     // {tipo: 'LembreteCriado' , dado: {id:1, texto = "fazer Cafe"}}
     const evento = req.body
     eventos.push(evento)
+    console.log(evento)
     //lembretes
     try{
-       await axios.post('http://localhost:4000/eventos',evento)
+       await axios.post('http://lembretes-clusterip-service:4000/eventos',evento)
+       
     }catch(e){}
     //observacoes
     try{
-        await axios.post('http://localhost:5000/eventos',evento)
+        await axios.post('http://observacao-clusterip-service:5000/eventos',evento)
     }catch(e){}
     //consulta
     try{
-        await axios.post('http://localhost:6000/eventos',evento)
+        await axios.post('http://consulta-clusterip-service:6000/eventos',evento)
     }catch(e){}
     //classificacao
     try{
-       await axios.post('http://localhost:7000/eventos',evento)
+       await axios.post('http://classificacao-clusterip-service:7000/eventos',evento)
     }catch(e){}
 
     res.status(200).send({msg: 'ok'})

@@ -15,7 +15,7 @@ const funcoes ={
         // atualizar o status da observacao na base local 
         obsParaAtualizar.status = observacao.status
         // emitir um evento do tipo ObservacaoAtualizada contento a obs atualizada 
-        axios.post('http://localhost:10000/eventos',{
+        axios.post('http://barramento-de-eventos-service:10000/eventos',{
             tipo: 'ObservacaoAtualizada',
             dados:{
                 id: observacao.id,
@@ -40,7 +40,7 @@ app.post('/lembretes/:id/observacoes',async (req,res)=>{
         texto,
         status: 'aguardando'})
     observacoesPorLembreteID[req.params.id] = obsDoLembrete 
-    await axios.post('http://localhost:10000/eventos',{
+    await axios.post('http://barramento-de-eventos-service:10000/eventos',{
         tipo: 'ObservacaoCriada',
         dados: {
             id: idObs, 
