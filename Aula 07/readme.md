@@ -40,9 +40,15 @@ Não esquecer de fazer o push das tags
 ```
 docker build -t nomeDockerHub/tag`
 
+docker build -t mmarins14/ecm516-lembretes:0.0.2
+
 kubectl apply -f lembretes.yaml
 
 #Pode deletar tbm com o proprio yaml -> kubectl delete -f lembretes.yaml
+
+kubectl rollout restart deployment lembretes-deployments -> depois do build e do docker push
+
+kubectl logs podename -> para ver os logs
 ```
 
 ### Validar código yaml

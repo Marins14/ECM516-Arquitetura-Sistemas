@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Req Kubernets",
+    "dateExported": "2023-10-21T15:11:14.791Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "258bb707-0a92-4029-8c5f-fff240e66ed2",
+            "colId": "72fee76b-62c1-4dd5-8f55-0530cab47c65",
+            "containerId": "",
+            "name": "Get Lembretes",
+            "url": "localhost:31380/lembretes",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-10-21T11:53:20.120Z",
+            "modified": "2023-10-21T11:53:20.120Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f6e8be16-d6c0-41f0-a402-162b8d3758d8",
+            "colId": "72fee76b-62c1-4dd5-8f55-0530cab47c65",
+            "containerId": "",
+            "name": "Post Lembretes",
+            "url": "localhost:31380/lembretes",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-10-21T13:16:51.678Z",
+            "modified": "2023-10-21T13:21:04.192Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"texto\":\"Fazer café\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ce0e8fb0-9523-42ae-a117-1a9a5d5f460c",
+            "colId": "72fee76b-62c1-4dd5-8f55-0530cab47c65",
+            "containerId": "",
+            "name": "Get Consulta",
+            "url": "localhost:30041/lembretes",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-10-21T13:57:40.679Z",
+            "modified": "2023-10-21T14:24:55.880Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "333b2d16-a95a-4cdc-ad2a-e304bf2cb193",
+            "colId": "72fee76b-62c1-4dd5-8f55-0530cab47c65",
+            "containerId": "",
+            "name": "Post Obs",
+            "url": "localhost:31182/lembretes/1/observacoes",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-10-21T14:31:14.290Z",
+            "modified": "2023-10-21T14:46:19.864Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"texto\":\"Café\"\n}\n",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

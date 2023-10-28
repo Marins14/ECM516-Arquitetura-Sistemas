@@ -14,7 +14,7 @@ const funcoes = {
         'importante': 
         'comum'
         //console.log(observacao);
-    axios.post('http://localhost:10000/eventos',{
+    axios.post('http://barramento-de-eventos-service:10000/eventos',{
         tipo: 'ObservacaoClassificada',
         dados: observacao
     })
@@ -32,5 +32,5 @@ app.post('/eventos',(req,res)=>{
     res.status(200).json({msg: 'Ok'})
 })
 
-app.listen(PORT,()=>console.log(`Classificação. Porta ${PORT}`))
+app.listen(PORT || 7000,()=>console.log(`Classificação. Porta ${PORT}`))
 

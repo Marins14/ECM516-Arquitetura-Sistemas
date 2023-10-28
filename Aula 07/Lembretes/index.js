@@ -15,7 +15,7 @@ app.post('/lembretes', (req,res)=>{
     id = id + 1
     lembretes[id] = {id,texto}
     axios.post(
-        'http://localhost:10000/eventos',{
+        'http://barramento-de-eventos-service:10000/eventos',{
             tipo : 'LembreteCriado',
             dados: {id, texto}
         }
@@ -39,7 +39,7 @@ app.post('/eventos', (req,res)=>{
 const PORT = process.env.PORT || 4000
 app.listen(PORT, ()=> {
     console.log('Nova Versão')
+    console.log("Agora usando o Docker Hub")
     console.log(`Lembretes. Porta ${PORT}`)
-
 })
 

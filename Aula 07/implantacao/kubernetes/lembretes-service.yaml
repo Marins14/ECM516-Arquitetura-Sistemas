@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: lembretes-service
+spec:
+  #Porta externa, acessivel fora do cluster kubernets
+  type: NodePort
+  # Porta interna, acessivel dentro do cluster kubernets
+  selector:
+    app: lembretes
+  ports: 
+    - name: lembretes
+      protocol: TCP
+      port: 4000
+      targetPort: 4000 #porta do microservico
+      
